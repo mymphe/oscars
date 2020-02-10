@@ -1,0 +1,177 @@
+header {
+    height: 100vh;
+    padding-top: 20vh;
+    h1 {
+        font-weight: 400;
+        margin: 2rem;
+    }
+    .players {
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        margin: 0 auto;
+
+        & > * {
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid #C79F27;
+            border-radius: 0.5rem;
+        }
+
+        & > *:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    p {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.table {
+    &__row {
+        min-height: 100vh;
+        padding: 2rem;
+
+        &__head {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        &__body {
+            &__prediction {
+                &__head {
+                    margin-bottom: 5rem;
+                }
+                &__body {
+                    display: grid;
+                    grid-template-columns: repeat(5, auto);
+                    justify-content: center;
+        
+                    &__nominee {
+                        width: 250px;
+                        overflow: hidden;
+                        height: 500px;
+                        border-radius: 0.5rem;
+                        transition: all 0.3s ease;
+                        filter: grayscale(80%);
+                        margin: 0 1rem;
+                        position: relative;
+
+                        &__details {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            padding: 2rem 0 0.5rem 0;
+                            background: linear-gradient(to top, black, transparent);
+
+                            & > * {
+                                color: #C79F27;
+                            }
+                            &__name {
+                                margin: 0 1rem;
+                                padding: 0.5rem 0;
+                                border-bottom: 1px solid #C79F27;
+                                text-transform: uppercase;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow-x: hidden;
+                            }
+                            &__extra {
+                                margin: 0.5rem;
+                                padding: 0 1rem;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow-x: hidden;
+                                overflow-y: visible;
+                                font-style: italic;
+                                text-transform: capitalize;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+
+                    &__answer {
+                        margin-top: 10rem;
+                        width: 250px;
+                        overflow: hidden;
+                        height: 500px;
+                        border-radius: 0.5rem;
+                        transition: all 0.3s ease;
+                        margin: 0 1rem;
+                        position: relative;
+
+                        &__result {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            padding: 20rem 0 0.5rem 0;
+                            background: linear-gradient(to top, black, transparent);
+
+                            & > * {
+                                color: #C79F27;
+                            }
+
+                            &__player {
+                                margin: 0 1rem;
+                                padding: 0.5rem 0;
+                                border-bottom: 1px solid #C79F27;
+                                text-transform: uppercase;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow-x: hidden;
+                            }
+                            &__points {
+                                margin: 0.5rem;
+                                padding: 0 1rem;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow-x: hidden;
+                                overflow-y: visible;
+                                font-style: italic;
+                                text-transform: capitalize;
+                                font-size: 6rem;
+                            }
+                        }
+                    }
+
+                    &__nominee:hover {
+                        cursor: pointer;
+                        filter: grayscale(0%) !important;
+                        width: 300px !important;
+                    }
+                    margin-bottom: 10rem;
+                }
+
+            }
+        }
+    }
+}
+
+button {
+    text-align: center;
+    background-color: white;
+    box-shadow: none;
+    padding: 1rem;
+    border: 1px solid #C79F27;
+    border-radius: 0.5rem;
+    outline: none;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #C79F27;
+    cursor: pointer;
+}
